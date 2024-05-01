@@ -1,12 +1,5 @@
 pipeline {
-    agent { 
-        docker { 
-            image "python:3.8"
-            args '--user 0:0'
-        } 
-
-    }
-    stages {
+     stages {
         stage('Run schemachange') {
             steps {
                 sh "pip install schemachange --upgrade"
